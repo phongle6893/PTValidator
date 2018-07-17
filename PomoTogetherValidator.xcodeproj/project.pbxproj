@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2183B2C4E11F8772C781F551 /* Pods_PomoTogetherValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 951A575ACDCBFC9293B3494E /* Pods_PomoTogetherValidator.framework */; };
 		26747E2920FD6427005AA150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26747E2820FD6427005AA150 /* AppDelegate.swift */; };
 		26747E2B20FD6427005AA150 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26747E2A20FD6427005AA150 /* ViewController.swift */; };
 		26747E2E20FD6427005AA150 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26747E2C20FD6427005AA150 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		26747E2F20FD6428005AA150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26747E3220FD6428005AA150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26747E3420FD6428005AA150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62F6CDBA87E4880424EA785A /* Pods-PomoTogetherValidator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomoTogetherValidator.release.xcconfig"; path = "Pods/Target Support Files/Pods-PomoTogetherValidator/Pods-PomoTogetherValidator.release.xcconfig"; sourceTree = "<group>"; };
+		951A575ACDCBFC9293B3494E /* Pods_PomoTogetherValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomoTogetherValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73DC23C01BDC0C40DDBD339 /* Pods-PomoTogetherValidator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomoTogetherValidator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PomoTogetherValidator/Pods-PomoTogetherValidator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2183B2C4E11F8772C781F551 /* Pods_PomoTogetherValidator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				26747E2720FD6427005AA150 /* PomoTogetherValidator */,
 				26747E2620FD6427005AA150 /* Products */,
+				508D92F3686051FF8C3A8F89 /* Pods */,
+				C4518BF0A239E5AF31514306 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = PomoTogetherValidator;
 			sourceTree = "<group>";
 		};
+		508D92F3686051FF8C3A8F89 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E73DC23C01BDC0C40DDBD339 /* Pods-PomoTogetherValidator.debug.xcconfig */,
+				62F6CDBA87E4880424EA785A /* Pods-PomoTogetherValidator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C4518BF0A239E5AF31514306 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				951A575ACDCBFC9293B3494E /* Pods_PomoTogetherValidator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26747E3720FD6428005AA150 /* Build configuration list for PBXNativeTarget "PomoTogetherValidator" */;
 			buildPhases = (
+				647BE1AA0737C2840E7FE7DF /* [CP] Check Pods Manifest.lock */,
 				26747E2120FD6427005AA150 /* Sources */,
 				26747E2220FD6427005AA150 /* Frameworks */,
 				26747E2320FD6427005AA150 /* Resources */,
+				F1AF9F2BED3E461037E75D06 /* [CP] Embed Pods Frameworks */,
+				C00ECA0BB330C7FDFA9F9A37 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		647BE1AA0737C2840E7FE7DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PomoTogetherValidator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C00ECA0BB330C7FDFA9F9A37 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PomoTogetherValidator/Pods-PomoTogetherValidator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1AF9F2BED3E461037E75D06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PomoTogetherValidator/Pods-PomoTogetherValidator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		26747E2120FD6427005AA150 /* Sources */ = {
@@ -278,15 +356,13 @@
 		};
 		26747E3820FD6428005AA150 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E73DC23C01BDC0C40DDBD339 /* Pods-PomoTogetherValidator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FWWK23S85;
 				INFOPLIST_FILE = PomoTogetherValidator/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = phongle.test.PomoTogetherValidator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +372,13 @@
 		};
 		26747E3920FD6428005AA150 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62F6CDBA87E4880424EA785A /* Pods-PomoTogetherValidator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FWWK23S85;
 				INFOPLIST_FILE = PomoTogetherValidator/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = phongle.test.PomoTogetherValidator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
